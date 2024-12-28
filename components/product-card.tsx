@@ -23,7 +23,7 @@ export function ProductCard({ product }: ProductCardProps) {
   const dispatch = useDispatch()
 
   const handleAddToCart = () => {
-    if (product.subCategory) return; // Don't add directly if customization is needed
+    if (product.subCategory) return; 
     
     dispatch(addItem({
       id: product.id,
@@ -31,7 +31,6 @@ export function ProductCard({ product }: ProductCardProps) {
       price: product.price,
       originalPrice: Math.round(product.price * 1.25),
       image: product.photoUrl,
-      quantity: 1,
     }))
   }
 
